@@ -17,7 +17,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Docker Compose Execute
-      run: docker-compose -f "docker-compose.yml" up -d
+      run: docker-compose -f "./docker/docker-compose.yml" up -d
     - name: Build Application JAR
       #working directory: .
       run: mvn clean package
